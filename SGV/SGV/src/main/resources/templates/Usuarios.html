@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SGV</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="CSS/home.css" />
+		<noscript><link href="CSS/noscript.css" /></noscript>
+                <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>                                                               
+            <script type="text/javascript">
+		$(document).ready(function(){ 
+                    
+                                                                     
+                        var checkboxA = document.getElementById('showAgregar');
+                        var checkboxC = document.getElementById('showConsultar');
+                        checkboxA.addEventListener("change", comprueba, false);                        
+
+                        function comprueba(){
+                          if(checkboxA.checked){
+                              $("#showAgregar").on( "click", function() {
+				$('#elementAgregar').show();
+                                
+                                });
+                          }else{
+                             $("#showAgregar").on( "click", function() {
+				$('#elementAgregar').hide();
+                            	
+                                });
+                          }
+                        };
+                        
+                        checkboxC.addEventListener("change", comprueba2, false);
+
+                        function comprueba2(){
+                          if(checkboxC.checked){
+                              $("#showConsultar").on( "click", function() {
+				$('#elementConsultar').show();				
+                                });
+                          }else{
+                             $("#showConsultar").on( "click", function() {
+				$('#elementConsultar').hide();
+                            	
+                                });
+                          }
+                        };
+                        
+                       
+		
+                        
+                         
+		});
+            </script>
+                             
+                
+	</head>
+	<body class="is-preload">
+
+		
+	<div id="wrapper">
+
+				
+	<header id="header" class="alt">
+            <div class=" logo">
+  	      <span class="logo " id="logimg">
+                <img src="images/pgj.png" alt="" class="log"/>
+              </span>
+              <span class="logo " id="logtext">                
+                <ul>
+                  <li><p class="textvien">Vienvenido:</p>
+                      </li>
+                  <li><button type="button" class="btn btn-outline-info sal">SALIR</button></li>                
+                </ul>
+                
+              </span>
+            </div>            
+	</header>
+
+				
+        <nav id="nav">
+
+            <div class="">
+              <p STYLE="font-weight: bold">SISTEMA GESTOR DE VEHICULOS</p>
+            </div>            
+                <ul>
+                        <li>
+                            
+                            <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary active labelAgregar">
+                                    <input type="checkbox"  id="showAgregar" >
+                                </label>
+                              </div> 
+                        </li>
+                        <li>
+                            
+                              <div class="btn-group-toggle" data-toggle="buttons">
+                                <label  class="btn btn-secondary active labelAgregar">
+                                  <input type="checkbox"  id="showConsultar"> 
+                                </label>
+                              </div> 
+                        </li>
+                </ul>
+           
+        </nav>
+         <div id="main">
+
+						
+		<section id="intro" class="main">
+                                                               
+                    <div class="UsuariosForm">
+                        <div id="contentAgregar" class="col-lg-12">
+                                <div id="elementAgregar" class="col-lg-12" style="display: none" >                             
+
+                                             <div class="input-group input-group-lg">
+                                                 <span class="input-group-addon" id="sizing-addon1"><p>Numero de Empleado: </p></span>
+                                               <input type="text" class="form-control" name="no_empleado" placeholder="" id="no_empleado" aria-describedby="sizing-addon1" required>
+                                             </div>
+                                             <br>                                                                				
+                                             <div class="input-group input-group-lg">
+                                                 <span class="input-group-addon" id="sizing-addon1"><p>Nombre: </p></span>
+                                               <input type="text" name="nombre" class="form-control" placeholder="" aria-describedby="sizing-addon1" required>
+                                             </div>
+                                             <div class="input-group input-group-lg">
+                                                 <span class="input-group-addon" id="sizing-addon1"><p>Apellido Paterno: </p></span>
+                                               <input type="text" name="ap_paterno" class="form-control" placeholder="" aria-describedby="sizing-addon1" required>
+                                             </div>
+                                             <div class="input-group input-group-lg">
+                                                 <span class="input-group-addon" id="sizing-addon1"><p>Apellido Materno: </p></span>
+                                               <input type="text" name="ap_materno" class="form-control" placeholder="" aria-describedby="sizing-addon1" required>
+                                             </div>
+                   
+                                             <div class="dropdown">
+                                                 <p>
+                                                  Tipo de usuario
+                                                 </p>
+                                                 <select name="tipo_usuario">
+                                                    <option value="0">Administrador</option>
+                                                    <option value="1">Usuario</option>                                                    
+                                                </select>
+                                             </div>
+                                             
+                                             <div class="input-group input-group-lg">
+                                                 <span class="input-group-addon" id="sizing-addon1"><p>Contraseña: </p></span>
+                                                 <input type="password" name="contrasena" class="form-control" placeholder="******" aria-describedby="sizing-addon1" required>
+                                             </div>
+                                             <div class="input-group input-group-lg">
+                                                 <span class="input-group-addon" id="sizing-addon1"><p>Repetir Contraseña: </p></span>
+                                                 <input type="password" name="contrasena2" class="form-control" placeholder="******" aria-describedby="sizing-addon1" required>
+                                             </div>
+                                             <br>
+                                             <button class="btn btn-lg btn-primary btn-block btn-signin" id="IngresoLog" type="submit" value="enviar">Agregar</button>
+
+                                     
+                                    	                                    
+                                
+                            </div>
+                            <div id="contentConsultar" class="col-lg-12">
+                                <div id="elementConsultar" class="col-lg-12" style="display: none" >                             
+                                    <h2>Formulario Consultar</h2>
+                                    <p>Se Consultara</p>
+                                </div>
+                            </div>
+  						</div>
+                    </div>
+                </section>
+         </div>
+
+		
+	
+				
+                <footer id="footer">
+                    
+                    <button href="/home" type="button" onclick="location.href='/home'" class="btn btn-outline-info sal">Home</button>
+                    
+                </footer>
+
+            </div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+                       
+                           
+	</body>
+</html>

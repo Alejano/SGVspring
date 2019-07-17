@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+
+<html>
+	<head>
+		<title>SGV</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="CSS/home.css" />
+		<noscript><link rel="stylesheet" href="CSS/noscript.css" /></noscript>
+               
+                
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+	<div id="wrapper">
+
+				<!-- Header -->
+	<header id="header" class="alt">
+            <div class=" logo">
+  	      <span class="logo " id="logimg">
+                <img src="images/pgj.png" alt="" class="log"/>
+              </span>
+              <span class="logo " id="logtext">                
+                <ul>
+                  <li><p class="textvien">Vienvenido: <%= session.getAttribute("Usuarios")%>                         
+                      </p></li>
+                   <form action="/logout" method="get" name="salir">
+		 		
+                        <button class="btn btn-lg btn-primary btn-block btn-signin" id="IngresoLog" type="submit" value="enviar">Salir</button>
+			
+                  </form>
+                  <!--<li><button accion="/logout.java" method="get" value="enviar" type="button" class="btn btn-outline-info sal" >SALIR</button></li>                -->
+                </ul>
+                
+              </span>
+            </div>
+            
+	</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+
+            <div class="">
+              <p STYLE="font-weight: bold">SISTEMA GESTOR DE VEHICULOS</p>
+            </div>
+
+
+            <!--
+						<ul>
+							<li><a href="#intro" class="active">Introduction</a></li>
+							<li><a href="#first">First Section</a></li>
+							<li><a href="#second">Second Section</a></li>
+							<li><a href="#cta">Get Started</a></li>
+						</ul>
+            -->
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+		<section id="intro" class="main">
+
+                    <div class="card-group card-background">
+                        <div class="card">
+                          <div class="card-image">
+                              <form action="/Viajes" method="post" name="salir">		 		
+                                  <button class="btn btn-lg btn-primary btn-block btn-signin ingresolog " id="IngresoLog" type="submit" value="enviar" 
+                                          style="position: relative !important; 
+                                                    width: 195px !important;
+                                                   height: 179px !important;
+                                                     left: 14px !important;
+                                                      top: 19px !important;">
+                                
+                                      <img src="images/itinerario.png" class="card-img-top imgboton" alt="..." style="border-radius: inherit; width: 158px; left: -1px;">
+                            
+                            </button>
+                              </form>
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">VIAJES</h5>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-image">
+                            <form action="/Vehiculos" method="post" name="salir">		 		
+                            <button class="btn btn-lg btn-primary btn-block btn-signin ingresolog" id="IngresoLog" type="submit" value="enviar"
+                                    style="position: relative !important; 
+                                                    width: 195px !important;
+                                                   height: 179px !important;
+                                                     left: 14px !important;
+                                                      top: 19px !important;">			                  
+                                    <img src="images/vehiculos.png" class="card-img-top imgboton" alt="..."style="border-radius: inherit; width: 158px; left: -1px;">
+                            </button>
+                            </form>
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">VEHICULOS</h5>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-image">
+                            <form action="/servletAdscripciones" method="post" name="salir">		 		
+                            <button class="btn btn-lg btn-primary btn-block btn-signin ingresolog" id="IngresoLog" type="submit" value="enviar"
+                                    style="position: relative !important; 
+                                                    width: 195px !important;
+                                                   height: 179px !important;
+                                                     left: 14px !important;
+                                                      top: 19px !important;"
+                                    >			                  
+                          <img src="images/apartamentos.png" class="card-img-top imgboton" alt="..."style="border-radius: inherit; width: 158px; left: -1px;">
+                            </button>
+                          </form>
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">ADSCRIPCIONES</h5>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-image">                            
+                          <form action="/Seguros" method="post" name="salir">		 		
+                            <button class="btn btn-lg btn-primary btn-block btn-signin ingresolog" id="IngresoLog" type="submit" value="enviar"
+                                    style="position: relative !important; 
+                                                    width: 195px !important;
+                                                   height: 179px !important;
+                                                     left: 14px !important;
+                                                      top: 19px !important;"
+                                    >			                  
+                            <img src="images/documento.png" class="card-img-top imgboton" alt="..." style="border-radius: inherit; width: 158px; left: -1px;">
+                            </button>
+                          </form>                         
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">SEGUROS</h5>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-image">
+                            <form action="/Conductores" method="post" name="salir">		 		
+                            <button class="btn btn-lg btn-primary btn-block btn-signin ingresolog" id="IngresoLog" type="submit" value="enviar"
+                                    style="position: relative !important; 
+                                                    width: 195px !important;
+                                                   height: 179px !important;
+                                                     left: 14px !important;
+                                                      top: 19px !important;"
+                                    >			                  
+                          <img src="images/conductor.png" class="card-img-top imgboton" alt="..." style="border-radius: inherit; width: 158px; left: -1px;">
+                            </button>
+                          </form>
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">CONDUCTORES</h5>
+
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-image">
+                            <form action="/Mantenimiento" method="post" name="salir">		 		
+                            <button class="btn btn-lg btn-primary btn-block btn-signin ingresolog" id="IngresoLog" type="submit" value="enviar"
+                                    style="position: relative !important; 
+                                                    width: 195px !important;
+                                                   height: 179px !important;
+                                                     left: 14px !important;
+                                                      top: 19px !important;"
+                                    >			                  
+                          <img src="images/mecanico.png" class="card-img-top imgboton" alt="..." style="border-radius: inherit; width: 158px; left: -1px;">
+                            </button>
+                            </form>
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">MANTENIMIENTO</h5>
+                          </div>
+                        </div>
+                    
+
+                    <div class="card">
+                      <div class="card-image, shownone">
+                        <a href="#" >
+                      
+                      </a>
+                      </div>
+                      <div class="card-body, shownone">
+                        <h5 class="card-title"></h5>
+                      </div>
+                    </div>
+                    
+                    <div class="card">
+                      <div class="card-image">
+                        <form action="/Usuarios" method="post" name="salir">		 		
+                            <button class="btn btn-lg btn-primary btn-block btn-signin ingresolog" id="IngresoLog" type="submit" value="enviar"
+                                    style="position: relative !important; 
+                                                    width: 195px !important;
+                                                   height: 179px !important;
+                                                     left: 14px !important;
+                                                      top: 19px !important;"
+                                    >			                  
+                      <img src="images/equipo.png" class="card-img-top imgboton" alt="..." style="border-radius: inherit; width: 158px; left: -1px;">
+                            </button>
+                        </form>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">USUARIOS</h5>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-image, shownone">
+                        <a href="#" >
+                      
+                      </a>
+                      </div>
+                      <div class="card-body, shownone">
+                        <h5 class="card-title"></h5>
+                      </div>
+                    </div>
+                    </div>
+
+
+
+
+
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+
+
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+                       
+                           
+	</body>
+</html>
